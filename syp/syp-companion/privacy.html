@@ -60,10 +60,14 @@
   <ul>
     <li><b>Files inside the extension itself.</b> The bundled page maps and stylesheets. No
         network involved.</li>
-    <li><b>A book index from <code>syp-search.pages.dev</code>.</b> To search inside a book,
-        the extension downloads that <i>one book's</i> index file, named by the book's public
-        id, and then searches it <b>on your device</b>. <b>Your search words are never sent</b>
-        — the matching happens locally, in your browser.</li>
+    <li><b>A book's search index from <code>syp-search.pages.dev</code>.</b>
+        <b>This is not the book.</b> The index is a word list — which words appear on which
+        page numbers — plus the chapter titles. It contains no sentences, no page text and no
+        snippets, and it cannot be used to read the book. The extension downloads that
+        <i>one book's</i> index, named by the book's public id, and then matches your query
+        against it <b>on your device</b>. <b>Your search words are never sent anywhere.</b>
+        That is also why a hosted result shows only a page number and its chapter — there is
+        no text on the server to quote from.</li>
     <li><b>Your own computer, if you run the companion server.</b> If a local server is
         reachable on <code>localhost:8010</code>, searches go to it. That is your machine
         talking to itself; nothing leaves it.</li>
