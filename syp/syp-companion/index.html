@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SYP Companion — Yogic Approach</title>
+<meta name="description" content="A browser extension for satyamyogaprasad.net: nested chapter navigation, deep links to printed pages, and reading tweaks.">
+<style>
+  :root{--ground:#1e212b;--deep:#14161c;--amber:#f5a623;--page:#e8e8ec;--muted:#9aa1af;--line:#3a3e4a}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--deep);color:var(--page);
+       font:16px/1.65 "Segoe UI",system-ui,-apple-system,sans-serif}
+  .bar{height:6px;background:var(--amber)}
+  .wrap{max-width:760px;margin:0 auto;padding:48px 20px 80px}
+  .crumb{color:var(--muted);font-size:.85rem;margin:0 0 1.8em}
+  .crumb a{color:var(--muted)}
+  header{display:flex;gap:20px;align-items:center;margin:0 0 1.4em}
+  header img{width:72px;height:72px;border-radius:16px}
+  h1{font-size:1.9rem;margin:0;letter-spacing:-.01em}
+  .ver{color:var(--muted);font-size:.9rem}
+  .lede{color:var(--page);margin:0 0 2.2em}
+  h2{font-size:1.1rem;margin:2em 0 .7em;color:var(--amber)}
+  .row{background:var(--ground);border:1px solid var(--line);border-radius:12px;
+       padding:18px 20px;margin:0 0 12px}
+  .row b{display:block;margin-bottom:.2em}
+  .row p{margin:.3em 0 0;color:var(--muted);font-size:.94rem}
+  .pending{display:inline-block;font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;
+           color:var(--deep);background:var(--muted);border-radius:999px;padding:2px 9px;
+           margin-left:8px;vertical-align:2px}
+  ol{color:var(--muted);padding-left:1.2em}
+  ol b{color:var(--page)}
+  code{background:var(--ground);border:1px solid var(--line);border-radius:5px;
+       padding:1px 6px;font-size:.9em}
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+         color:var(--muted);font-size:.85rem}
+  a{color:var(--amber)}
+</style>
+</head>
+<body>
+<div class="bar"></div>
+<div class="wrap">
+  <p class="crumb"><a href="../../">Tools</a> / <a href="../">SYP</a> / SYP Companion</p>
+
+  <header>
+    <img src="assets/icon-128.png" alt="">
+    <div>
+      <h1>SYP Companion</h1>
+      <div class="ver">version 0.8.2</div>
+    </div>
+  </header>
+
+  <p class="lede">A small pane above satyamyogaprasad.net pages: nested chapter navigation for
+  923 mapped books, deep links that open a book at its printed page, and reading tweaks.
+  It stores your preferences on your own device and sends nothing anywhere.</p>
+
+  <h2>Install</h2>
+
+  <div class="row">
+    <b>Firefox — desktop and Android <span class="pending">listing pending</span></b>
+    <p>One build covers both. The add-on is going through Mozilla's review; this page will
+       carry the install link as soon as it is live.</p>
+  </div>
+
+  <div class="row">
+    <b>Chrome <span class="pending">listing pending</span></b>
+    <p>Going through Chrome Web Store review. The link will appear here once published.</p>
+  </div>
+
+  <div class="row">
+    <b>Edge — via the Chrome listing</b>
+    <p>Edge installs Chrome extensions directly. Open <code>edge://extensions</code>, turn on
+       <b>Allow extensions from other stores</b> (bottom left), then use the Chrome link above
+       once it is live. No separate Edge install is needed.</p>
+  </div>
+
+  <h2>Install it now, before the listings are live</h2>
+  <p style="color:var(--muted);margin-top:0">Download the matching zip from
+     <a href="https://github.com/yogicapproach/yogic-tools/releases">Releases</a> and unzip it.</p>
+  <ol>
+    <li><b>Chrome / Edge:</b> open <code>chrome://extensions</code> (or <code>edge://extensions</code>),
+        turn on <b>Developer mode</b>, choose <b>Load unpacked</b>, and pick the unzipped
+        <i>folder</i>.</li>
+    <li><b>Firefox:</b> open <code>about:debugging#/runtime/this-firefox</code>, choose
+        <b>Load Temporary Add-on</b>, and pick <code>manifest.json</code>.
+        This one is removed when Firefox restarts — the store listing is the permanent route.</li>
+  </ol>
+
+  <h2>Privacy</h2>
+  <p style="color:var(--muted);margin-top:0">Preferences are kept in your browser's own storage.
+     The extension collects no personal data and transmits nothing — declared in its manifest as
+     <code>data_collection_permissions: none</code>, which Firefox shows you at install time.</p>
+
+  <footer>
+    <a href="https://github.com/yogicapproach/yogic-tools/issues">Report a problem or ask a question</a> ·
+    <a href="https://github.com/yogicapproach/yogic-tools/releases">All releases</a> ·
+    <a href="https://yogicapproach.com">yogicapproach.com</a>
+  </footer>
+</div>
+</body>
+</html>

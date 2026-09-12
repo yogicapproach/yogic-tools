@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SYP Tools — Yogic Approach</title>
+<style>
+  :root{--ground:#1e212b;--deep:#14161c;--amber:#f5a623;--page:#e8e8ec;--muted:#9aa1af;--line:#3a3e4a}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--deep);color:var(--page);
+       font:16px/1.6 "Segoe UI",system-ui,-apple-system,sans-serif}
+  .bar{height:6px;background:var(--amber)}
+  .wrap{max-width:760px;margin:0 auto;padding:56px 20px 80px}
+  .crumb{color:var(--muted);font-size:.85rem;margin:0 0 1.5em}
+  .crumb a{color:var(--muted)}
+  h1{font-size:1.9rem;margin:0 0 .3em;letter-spacing:-.01em}
+  .sub{color:var(--muted);margin:0 0 2.5em}
+  .card{display:flex;gap:18px;align-items:flex-start;text-decoration:none;color:inherit;
+        background:var(--ground);border:1px solid var(--line);border-radius:12px;
+        padding:22px 24px;margin:0 0 16px}
+  .card:hover{border-color:var(--amber)}
+  .card img{width:56px;height:56px;border-radius:12px;flex:0 0 auto}
+  .card h2{margin:0 0 .25em;font-size:1.15rem;color:var(--amber)}
+  .card p{margin:0;color:var(--muted);font-size:.95rem}
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+         color:var(--muted);font-size:.85rem}
+  a{color:var(--amber)}
+</style>
+</head>
+<body>
+<div class="bar"></div>
+<div class="wrap">
+  <p class="crumb"><a href="../">Tools</a> / SYP</p>
+  <h1>Satyam Yoga Prasad</h1>
+  <p class="sub">Tools for reading the SYP library at satyamyogaprasad.net.</p>
+
+  <a class="card" href="syp-companion/">
+    <img src="syp-companion/assets/icon-128.png" alt="">
+    <span>
+      <h2>SYP Companion →</h2>
+      <p>A browser extension: nested chapter navigation for 923 mapped books,
+         deep links straight to a printed page, and reading tweaks.</p>
+    </span>
+  </a>
+
+  <footer>
+    <a href="https://github.com/yogicapproach/yogic-tools/releases">Releases</a> ·
+    <a href="https://github.com/yogicapproach/yogic-tools/issues">Support</a> ·
+    <a href="https://yogicapproach.com">yogicapproach.com</a>
+  </footer>
+</div>
+</body>
+</html>
