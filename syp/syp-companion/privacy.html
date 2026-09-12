@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SYP Companion — Privacy</title>
+<meta name="description" content="What SYP Companion stores, what it never collects, and every network request it can make.">
+<style>
+  :root{--ground:#1e212b;--deep:#14161c;--amber:#f5a623;--page:#e8e8ec;--muted:#9aa1af;--line:#3a3e4a}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--deep);color:var(--page);
+       font:16px/1.65 "Segoe UI",system-ui,-apple-system,sans-serif}
+  .bar{height:6px;background:var(--amber)}
+  .wrap{max-width:720px;margin:0 auto;padding:48px 20px 80px}
+  .crumb{color:var(--muted);font-size:.85rem;margin:0 0 1.8em}
+  .crumb a{color:var(--muted)}
+  h1{font-size:1.8rem;margin:0 0 .2em;letter-spacing:-.01em}
+  .date{color:var(--muted);font-size:.9rem;margin:0 0 2em}
+  h2{font-size:1.05rem;margin:2em 0 .6em;color:var(--amber)}
+  p{margin:.7em 0}
+  ul{color:var(--muted);padding-left:1.2em}
+  li{margin:.45em 0}
+  li b{color:var(--page)}
+  .box{background:var(--ground);border:1px solid var(--line);border-radius:12px;padding:18px 22px}
+  code{background:var(--ground);border:1px solid var(--line);border-radius:5px;
+       padding:1px 6px;font-size:.9em}
+  footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);
+         color:var(--muted);font-size:.85rem}
+  a{color:var(--amber)}
+</style>
+</head>
+<body>
+<div class="bar"></div>
+<div class="wrap">
+  <p class="crumb"><a href="../../">Tools</a> / <a href="../">SYP</a> /
+     <a href="./">SYP Companion</a> / Privacy</p>
+
+  <h1>Privacy</h1>
+  <p class="date">SYP Companion · last updated 12 September 2026</p>
+
+  <div class="box">
+    <p style="margin:0"><b>The extension collects nothing about you.</b> It has no analytics,
+    no telemetry, no accounts and no advertising. Nothing you read, search for or click is
+    recorded or sent to us — we have no server that could receive it.</p>
+  </div>
+
+  <h2>What it stores, and where</h2>
+  <p>Only your own settings, kept in your browser's local extension storage on your device:</p>
+  <ul>
+    <li>Your reading tweaks (wide column, high contrast, larger line-height), per site.</li>
+    <li>Whether the bar is shown or hidden.</li>
+    <li>Anything you type into the options page — an optional data URL, and an optional
+        search API key.</li>
+  </ul>
+  <p>This never leaves your device, is not synced to us, and is deleted when you remove the
+  extension.</p>
+
+  <h2>Every network request it can make</h2>
+  <p>Stated in full, because "we don't collect data" should be checkable:</p>
+  <ul>
+    <li><b>Files inside the extension itself.</b> The bundled page maps and stylesheets. No
+        network involved.</li>
+    <li><b>A book index from <code>syp-search.pages.dev</code>.</b> To search inside a book,
+        the extension downloads that <i>one book's</i> index file, named by the book's public
+        id, and then searches it <b>on your device</b>. <b>Your search words are never sent</b>
+        — the matching happens locally, in your browser.</li>
+    <li><b>Your own computer, if you run the companion server.</b> If a local server is
+        reachable on <code>localhost:8010</code>, searches go to it. That is your machine
+        talking to itself; nothing leaves it.</li>
+    <li><b>A data URL you type in yourself.</b> The options page has a blank "data base URL"
+        field. If you fill it in with a remote address, the extension will send book ids and
+        search terms <i>to that address</i>, because you asked it to. Left blank — the default
+        — this never happens.</li>
+  </ul>
+  <p>The extension loads no remote code and runs only on
+  <code>satyamyogaprasad.net</code> and <code>localhost:8010</code>.</p>
+
+  <h2>Permissions, and why</h2>
+  <ul>
+    <li><b>storage</b> — to remember the settings above.</li>
+    <li><b>activeTab</b> — to add the bar to the page you are reading.</li>
+    <li><b>Access to satyamyogaprasad.net</b> — the site the bar works on.</li>
+  </ul>
+
+  <h2>Children, and sensitive data</h2>
+  <p>The extension asks for nothing, so it collects nothing from anyone of any age. It never
+  touches passwords, payment details, location, health information or your browsing history.
+  Its Firefox manifest declares <code>data_collection_permissions: none</code>, which Firefox
+  shows you before you install.</p>
+
+  <h2>Changes, and how to ask</h2>
+  <p>If this ever changes, this page changes with it and the date above moves. Questions or
+  doubts are welcome — and are public, which is the point:
+  <a href="https://github.com/yogicapproach/yogic-tools/issues">open an issue</a>.</p>
+
+  <footer>
+    <a href="./">Back to SYP Companion</a> ·
+    <a href="https://github.com/yogicapproach/yogic-tools/issues">Support</a> ·
+    <a href="https://yogicapproach.com">yogicapproach.com</a>
+  </footer>
+</div>
+</body>
+</html>
