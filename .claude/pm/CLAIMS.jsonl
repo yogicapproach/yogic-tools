@@ -1,0 +1,2 @@
+{"ts": "2026-11-09T09:08:19Z", "agent": "swarm 20261109T132545-yogic-tools", "issue": 1, "status": "claimed", "note": "rewrite privacy.html for 0.11.x Recent and trail"}
+{"ts": "2026-11-09T09:08:21Z", "agent": "swarm 20261109T132545-yogic-tools", "issue": 1, "status": "done", "commit": "4efc565", "branch": "wave27/yt-1"}
