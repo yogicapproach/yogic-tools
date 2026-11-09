@@ -36,24 +36,64 @@
      <a href="./">SYP Companion</a> / Privacy</p>
 
   <h1>Privacy</h1>
-  <p class="date">SYP Companion · last updated 12 September 2026</p>
+  <p class="date">SYP Companion · last updated 9 November 2026 · describes version 0.11.x</p>
 
   <div class="box">
-    <p style="margin:0"><b>The extension collects nothing about you.</b> It has no analytics,
-    no telemetry, no accounts and no advertising. Nothing you read, search for or click is
-    recorded or sent to us — we have no server that could receive it.</p>
+    <p style="margin:0"><b>The extension sends nothing about you to us.</b> It has no analytics,
+    no telemetry, no accounts and no advertising, and we have no server that could receive
+    anything you read, search for or click. A few lists the extension keeps <i>for you</i>
+    (below) stay in your browser, on your device, and nowhere else.</p>
   </div>
 
   <h2>What it stores, and where</h2>
-  <p>Only your own settings, kept in your browser's local extension storage on your device:</p>
-  <ul>
-    <li>Your reading tweaks (wide column, high contrast, larger line-height), per site.</li>
-    <li>Whether the bar is shown or hidden.</li>
-    <li>Anything you type into the options page — an optional data URL, and an optional
-        search API key.</li>
-  </ul>
-  <p>This never leaves your device, is not synced to us, and is deleted when you remove the
+  <p>Everything below is kept in your browser's local extension storage, on your device. None of
+  it is sent to us, none of it is synced, and all of it is deleted when you remove the
   extension.</p>
+  <ul>
+    <li><b>Your settings.</b> Your reading tweaks (wide column, high contrast, larger
+        line-height) and whether the bar is shown or hidden, per site
+        (<code>sypCompanionState</code>); and anything you type into the options page — an
+        optional data URL, an optional search API key, and your Recent-list choices
+        (<code>sypCompanionOptions</code>).</li>
+    <li><b>Recent — a list of what you opened or used.</b> Shown in the bar as "Recent" and in
+        Options as "Trail of what you opened" (<code>sypCompanionTrail</code>). Each entry is
+        the name of a book, magazine, audio or video, the page you were last on, and when you
+        first and last saw it. It never holds the text of a page. It is <b>on by default</b>:
+        up to 200 entries, forgotten after 90 days, five shown in the bar — you can change
+        all of that, or turn it off, in Options. <b>The words you search for are kept in it
+        only if you tick "Also remember the words I search for"</b> (off by default), because
+        typed words can be personal.</li>
+    <li><b>One remembered link, for up to 30 minutes.</b> If the extension can tell you are
+        signed out of the site, it keeps the address of the page you were on — a path on
+        <code>satyamyogaprasad.net</code> and nothing else — so it can offer to take you back
+        after you sign in (<code>sypCompanionReturnLink</code>). It is one slot: it is deleted
+        when offered, when you dismiss it, or when it expires, and it is never sent anywhere.
+        It does not read your browser's history.</li>
+    <li><b>A "what's new" marker.</b> One date — the newest catalogue snapshot you have looked
+        at — so the bar can tell what is new since
+        (<code>sypCompanionWhatsNewSeen</code>).</li>
+    <li><b>Saved chapter lists.</b> The chapter titles of books you have opened, so the bar does
+        not download them again on every page turn (<code>sypCompanionSections</code>; no
+        book text).</li>
+    <li><b>Reachability notes.</b> Whether the optional local server on
+        <code>localhost:8010</code> answered recently, so the bar does not keep re-asking
+        (<code>sypCompanionProbe</code> and <code>sypCompanionCorpusProbe</code>).</li>
+  </ul>
+
+  <h2>How to see and clear it</h2>
+  <ul>
+    <li><b>Recent:</b> in the bar, "Clear trail" forgets everything in it. In Options,
+        "Trail of what you opened" lets you show it, export it as a file, change its limits,
+        turn it off, or press "Clear all". Turning it off stops recording but does not erase
+        what is already kept — press Clear all for that. Unticking "remember the words I
+        search for" and pressing Save erases the searches already kept.</li>
+    <li><b>Saved chapter lists:</b> Options has a "Clear saved chapters" button.</li>
+    <li><b>Everything:</b> clearing your browser's cache or history does <i>not</i> reach
+        extension storage, because browsers keep it separate. Removing the extension deletes
+        all of it.</li>
+    <li>Anyone who can use your browser profile can open Options and see the trail. On a
+        shared computer, clear it.</li>
+  </ul>
 
   <h2>Every network request it can make</h2>
   <p>Stated in full, because "we don't collect data" should be checkable:</p>
@@ -87,8 +127,10 @@
   </ul>
 
   <h2>Children, and sensitive data</h2>
-  <p>The extension asks for nothing, so it collects nothing from anyone of any age. It never
-  touches passwords, payment details, location, health information or your browsing history.
+  <p>The extension asks you for nothing, and sends nothing to us, from anyone of any age. It
+  never touches passwords, payment details, location or health information, and it does not
+  read your browser's history; the Recent list above is only what you opened inside this
+  extension's own pages, kept on your device.
   Its Firefox manifest declares <code>data_collection_permissions: none</code>, which Firefox
   shows you before you install.</p>
 
