@@ -10,7 +10,7 @@ browser tools. Every page here is **live and public**: change it through a branc
 - Tracked content: `index.html`, `syp/index.html`, `syp/syp-companion/{index,privacy}.html`,
   `syp/syp-companion/assets/*.png`, `syp/notes/*.html`, `README.md`, this file.
 - The extension source is **not here**. It is in the `syp-companion` repo
-  (`C:\Users\kaanchan\Projects\Yoga\Ashram\SYP\SYP-Unofficial\github\syp-companion`; its
+  (the local `syp-companion` checkout; its
   `docs/EXTENSION-PUBLISHING.md` is the store-submission playbook). Read it, do not edit it from here.
 - Releases (zips + `SHA256SUMS`, tag `syp-companion-v<version>`) are published **on this repo's**
   Releases page. Latest at the time of writing: `syp-companion-v0.8.3`.
